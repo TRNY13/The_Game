@@ -3,18 +3,21 @@ class Robots { //this is the overall object generator for the game, this will be
     this.Name=Name,
     this.HP=HP,              //These are all of the attributes for the robots
     this.Attack=Attack,     
-    this.Accuracy=(Math.floor(Math.random() * 3) + 6) / 10 //I grabbed the random hit formula from the space battle game
+    this.Accuracy=Accuracy //(Math.floor(Math.random() * 3) + 6) / 10 //I grabbed the random hit formula from the space battle game
 }   //The gist is there are 5 rounds the first person to win 5 rounds wins the game
 
-punchButton (robot){
+
+ punchButton = (robot) => {
  let chancetoPunch = Math.random()
- if(this.Accuracy >= chancetoPunch){//the robot lands the attack
+ if(this.Accuracy > chancetoPunch){//the robot lands the attack
      robot.HP -= this.Attack;
  }else{ //Robot misses the attack, I want to add sound effects for whenever the punch lands
  console.log("You miss")//This is just a placeholder for now, I want to have the arms flail or something
 } 
 }
-}
+}//query is a method/function, call html tags with parenthesis. .punch if class, #punch if id
+const punch = document.querySelector("#punch");
+console.log(punch)
 // Punch (robot){
 //  let chancetoPunch = Math.random()
 //  if(this.Accuracy >= chancetoPunch){
@@ -35,16 +38,15 @@ punchButton (robot){
 //         if 
 //     }
 // }
-
+//need an event listener for the punch button, that invokes round1 function inside
 const humanWinArr = [];
 const aiWinArr = [];
 
+const playerRobot = new Robots ("PR1", 5, 1,.6);
+const aiRobot = new Robots ("AIR1", 5, 1,.6);
 
-
-
-const Round1 = () => { //There will be 5 rounds, I'll start it simple by having a function for each round
-    let playerRobot = new Robots ("PR1", 5, 1);
-    let aiRobot = new Robots ("AIR1", 5, 1);
+//round1 = attack
+const round1= () => { //There will be 5 rounds, I'll start it simple by having a function for each round
     let i = 0;
     let x = 0;
     const round1HumWinArr = [];
@@ -67,7 +69,12 @@ const Round1 = () => { //There will be 5 rounds, I'll start it simple by having 
     }if(round1AiWinArr.length > 0){
         console.log("ai player has 1 win") && aiWinArr.push(1)
     }
+    
 } 
+//once user clicks punch button it will start
+
+
+Round1() //This will start round 1 of the game
 
 
 
