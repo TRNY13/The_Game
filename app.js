@@ -15,30 +15,28 @@ class Robots { //this is the overall object generator for the game, this will be
  console.log("You miss")//This is just a placeholder for now, I want to have the arms flail or something
 } 
 }
-}//query is a method/function, call html tags with parenthesis. .punch if class, #punch if id
-const punch = document.querySelector("#punch");
-console.log(punch)
-// Punch (robot){
-//  let chancetoPunch = Math.random()
-//  if(this.Accuracy >= chancetoPunch){
-//      robot.HP -= this.Attack;
-//      //I want to add sound effects for whenever the punch lands
-//      if(robot.HP <= 0) {alert("You Lost round 1")} // 1 of the players lose
-//  }else{ //Robot misses the attack
-//  console.log("You miss")//This is just a placeholder for now, I want to have the arms flail or something
-// }
-// }
-// }    //Right here this is the old Punch function I decided to change it to make it more simple
-// and for the function to strictly just punch. I also wanted to keep it here as a reference.
+}//query is a method/function, call html tags with parenthesis. ;  .punch if class, #punch if id
+// This was the method Teo showed me for getting the punch button to work
+// I'm going to comment it out for the time being and this method I picked up from youtube
+// const punch = document.querySelector("#punch");
+// console.log(punch)
 
 
-// const startGame1 = () =>{        at first I was going to do a loop and have
-//     let round1WinArr =[];        each win add to an array but i think i figured out
-//     for(let i = 0; i < 1; i++){  a different method
-//         if 
-//     }
-// }
-//need an event listener for the punch button, that invokes round1 function inside
+// fireButton.addEventListener("click", function()
+
+// const (variable for your button) = document.getElementById("id of your button in html");  
+//  -----when calling/using function ----------
+//   variable for you button.addEventListener("click", function () { things you want to run with your function});
+
+// const startround1 = getElementById(startround1);
+// round1.addEventListener("click", function(){
+
+    // fireButton.addEventListener("click", function(){
+    //     computerTurn()}
+
+//  const round1 = document.querySelector 
+
+
 const humanWinArr = [];
 const aiWinArr = [];
 
@@ -74,7 +72,7 @@ const round1= () => { //There will be 5 rounds, I'll start it simple by having a
 //once user clicks punch button it will start
 
 
-Round1() //This will start round 1 of the game
+ round1() //This will start round 1 of the game
 
 
 
@@ -144,6 +142,31 @@ Round1() //This will start round 1 of the game
 //     }
 
 // } 
+
+
+
+// All of these comments down here are old scratch notes, I put them down here to get them out of the way.
+
+// Punch (robot){
+//  let chancetoPunch = Math.random()
+//  if(this.Accuracy >= chancetoPunch){
+//      robot.HP -= this.Attack;
+//      //I want to add sound effects for whenever the punch lands
+//      if(robot.HP <= 0) {alert("You Lost round 1")} // 1 of the players lose
+//  }else{ //Robot misses the attack
+//  console.log("You miss")//This is just a placeholder for now, I want to have the arms flail or something
+// }
+// }
+// }    //Right here this is the old Punch function I decided to change it to make it more simple
+// and for the function to strictly just punch. I also wanted to keep it here as a reference.
+
+
+// const startGame1 = () =>{        at first I was going to do a loop and have
+//     let round1WinArr =[];        each win add to an array but i think i figured out
+//     for(let i = 0; i < 1; i++){  a different method
+//         if 
+//     }
+// }
 
 // let robot1 = new Robots ("Jimmy",5,1)
 // let robot2 = new Robots ("Tommy",5,1)
