@@ -5,9 +5,12 @@ class Robots { //this is the overall object generator for the game, this will be
     this.Attack=Attack,     
     this.Accuracy=Accuracy //(Math.floor(Math.random() * 3) + 6) / 10 //I grabbed the random hit formula from the space battle game
 }   //The gist is there are 5 rounds the first person to win 5 rounds wins the game
+setHP(){
+    this.HP = 5
+}
 
 
- punchButton = (robot) => {
+ punch = (robot) => {
  let chancetoPunch = Math.random()
  if(this.Accuracy > chancetoPunch){//the robot lands the attack
      robot.HP -= this.Attack;
@@ -15,12 +18,7 @@ class Robots { //this is the overall object generator for the game, this will be
  console.log("You miss")//This is just a placeholder for now, I want to have the arms flail or something
 } 
 }
-}//query is a method/function, call html tags with parenthesis. ;  .punch if class, #punch if id
-// This was the method Teo showed me for getting the punch button to work
-// I'm going to comment it out for the time being and this method I picked up from youtube
-// const punch = document.querySelector("#punch");
-// console.log(punch)
-
+}
 
 // fireButton.addEventListener("click", function()
 
@@ -36,20 +34,35 @@ class Robots { //this is the overall object generator for the game, this will be
 
 //  const round1 = document.querySelector 
 
-
 const humanWinArr = [];
 const aiWinArr = [];
 
 const playerRobot = new Robots ("PR1", 5, 1,.6);
 const aiRobot = new Robots ("AIR1", 5, 1,.6);
+    
+let i = 0;
+let x = 0;
+let round = 1;
+const round1HumWinArr = [];
+const round1AiWinArr = [];
+
 
 //round1 = attack
 const round1= () => { //There will be 5 rounds, I'll start it simple by having a function for each round
-    let i = 0;
-    let x = 0;
-    const round1HumWinArr = [];
-    const round1AiWinArr = [];
+    if(playerRobot.HP > 0){
+        if(aiRobot.HP > 0){
+            playerRobot.punch(aiRobot) // if ai is still alive have them punch next
+        }else{//player is alive but the ai is dead, human wins this round 
+          if(round === 5){
+              round = 1; 
+              playerRobot.setHP();
+              aiRobot.setHP();//if players wins > airobots, add 1 to player wins, if else add 1 win to ai wins
 
+          }  
+        }
+    }else{ //player has no more health
+        
+    }
     if(playerRobot.HP <= 0){ //this is to start the fight, however I just realized I already have the same losing conditions in the punch function as well
         console.log("AI Player wins this round") // Ai wins round 1
     }if(aiRobot.HP <= 0){
@@ -67,12 +80,28 @@ const round1= () => { //There will be 5 rounds, I'll start it simple by having a
     }if(round1AiWinArr.length > 0){
         console.log("ai player has 1 win") && aiWinArr.push(1)
     }
-    
 } 
+
+// 1st check if players hp <=0 ; after check if ai <=0
+    
+
+playerRobot.punch(aiRobot)
+
+console.log(aiRobot.HP)
+
+
+
+
+
+// const round1Button = document.getElementById("round1Button");                  
+// console.log(round1Button)
+// round1Button.addEventListener("click",round1) //don't do
+
+
 //once user clicks punch button it will start
 
 
- round1() //This will start round 1 of the game
+//  round1() //This will start round 1 of the game
 
 
 
@@ -146,6 +175,14 @@ const round1= () => { //There will be 5 rounds, I'll start it simple by having a
 
 
 // All of these comments down here are old scratch notes, I put them down here to get them out of the way.
+
+//query is a method/function, call html tags with parenthesis. ;  .punch if class, #punch if id
+// This was the method Teo showed me for getting the punch button to work
+// I'm going to comment it out for the time being and this method I picked up from youtube
+// const punch = document.querySelector("#punch");
+// console.log(punch)
+
+
 
 // Punch (robot){
 //  let chancetoPunch = Math.random()
