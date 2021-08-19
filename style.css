@@ -1,15 +1,28 @@
 
 .mainDiv{
-    border: solid blue; height: 50vh; width: 50vw;position: center ; display: flex;
+    border: solid blue; height: 50vh; width: 50v; display: flex;
     justify-content: center;
     align-items: center}
 
 header{
+    font:xx-large, icon ;
     position: center ; display: flex;
     justify-content: center;
     align-items: center
 }
 
-label{
-    
+/* label{
+    position: center ; display: flex;
+    justify-content: center;
+    align-items: center
+} */
+input{
+    position: center ; display: flex;
+    justify-content: center;
+    align-items: center
+}
+button{
+    position: center ; display: flex;
+    justify-content: center;
+    align-items:center
 }
