@@ -11,30 +11,89 @@
 // Once either the human or ai reaches 0 hp the game is over and that is where
 // the code break comes in.
 
-document.getElementById("myButton").onclick = function(){
-    let userInput = document.getElementById("myText").value;
-    let humanChancetoPunch = .6;
-    let robotChancetoPunch = .6;
-    let humanHP = 10;
-    let aiHP = 10;
-    if(userInput == "Punch!" && humanChancetoPunch > Math.random()){
-    aiHP - 1;
-    console.log("You landed a Punch!!!") 
-    }if(userInput == "Punch!" && humanChancetoPunch < Math.random()){
-    console.log("You missed!");
-    }else if(userInput == "Punch!" && robotChancetoPunch > Math.random()){
-    humanHP - 1
-    console.log("The AI punched you!");
-    }else{
-        console.log("You both missed!")
-    }if(humanHP === 0){
-        console.log("You lost the game! & The Ai rocked you!")
-        break
-    }else if(aiHP === 0){
-        console.log("You rocked the Ai & won the game!")
-        break
+// I put the HP variables outside of the function so the HP doesnt reset each time
+let humanHP = 10;
+let aiHP = 10;
+
+
+// This whole document is to obtain the user input to start the game
+document.getElementById("myButton").onclick = function () {
+    let userInput = document.getElementById("myText").value; //The function then takes the text the user puts in and assigns it to the userInput variable
+    let humanChancetoPunch = .6; //Both the Users and AI's chance to attack are set to .6,
+    let robotChancetoPunch = .6; //to give both a slightly higher chance to land a punch
+    if (humanHP === 0) { //These first 2 checks are to check to make sure neither human or robot are out of hp
+        console.log("You lost the game! & The Ai rocked you!", "Click to Play Again!")
+    } else if (aiHP === 0) {
+        console.log("You rocked the Ai & won the game!", "Click to Play Again!")
+    } else { //this else statement starts the fighting for both characters
+        // users turn
+        if (userInput == "Punch!" && humanChancetoPunch > Math.random()) {
+            aiHP--; //this decrements the Ai's hp if they get hit
+            console.log("You landed a Punch!!!", "AIHealth: " + aiHP)
+        } else {
+            console.log("You missed!");
+        }
+        //ais turn
+        if (userInput == "Punch!" && robotChancetoPunch > Math.random()) {
+            humanHP--; //this decrements the Humans Hp if they get hit
+            console.log("The AI punched you!", "HumanHealth: " + humanHP);
+        } else {
+            console.log("AI missed!")
+        }
+
     }
 }
+
+
+// Can't get this button to work for now
+// i tried to create this function to reset
+// the hp values back to 0 to restart the game
+// i tried to link everything but it still would not work
+
+const playAgain = () => {
+    if (humanHP < 10 || aiHP < 10) {
+        humanHP === 10;
+        aiHP === 10;
+    }
+}
+
+playAgain();
+
+const playAgainBtn = document.getElementById("playAgainBtn")
+playAgainBtn.addEventListener("click",playAgain)
+
+
+
+//     element.addEventListener('click', function() {
+//         if(humanHP < 10 || aiHP < 10 ){
+//             humanHP === 10;
+//             aiHP === 10;
+//         }
+//     }
+// }
+
+
+
+ // i plan to add an addEventListener to restart the game once one of the players hits 0
+
+
+
+
+
+
+
+
+
+    //     alert("You Lose!!")
+    //     //break; the console kept saying it was illegal so i commented it out for now
+    //     console.log("You lost the game! & The Ai rocked you!")
+    //     return;
+    // }if(aiHP === 0){
+    //      //break; the console kept saying it was illegal so i commented it out for now
+    //      console.log("You rocked the Ai & won the game!")
+    //     return;
+
+
 
 
 
@@ -67,31 +126,31 @@ document.getElementById("myButton").onclick = function(){
 //  console.log("You miss")//This is just a placeholder for now, I want to have the arms flail or something
 // } 
 // }
-// }
+// // }
 
-// const (variable for your button) = document.getElementById("id of your button in html");  
-//  -----when calling/using function ----------
-//   variable for you button.addEventListener("click", function () { things you want to run with your function});
+// // const (variable for your button) = document.getElementById("id of your button in html");  
+// //  -----when calling/using function ----------
+// //   variable for you button.addEventListener("click", function () { things you want to run with your function});
 
-// const startround1 = getElementById(startround1);
-// round1.addEventListener("click", function(){
+// // const startround1 = getElementById(startround1);
+// // round1.addEventListener("click", function(){
 
-    // .addEventListener("click", function(){
-    //     computerTurn()}
+//     // .addEventListener("click", function(){
+//     //     computerTurn()}
 
-//  const round1 = document.querySelector 
+// //  const round1 = document.querySelector 
 
-// const humanWinArr = [];
-// const aiWinArr = [];
+// // const humanWinArr = [];
+// // const aiWinArr = [];
 
-// const playerRobot = new Robots ("PR1", 5, 1,.6);
-// const aiRobot = new Robots ("AIR1", 5, 1,.6);
-    
-// let i = 0;
-// let x = 0;
-// let round = 1;
-// const round1HumWinArr = [];
-// const round1AiWinArr = [];
+// // const playerRobot = new Robots ("PR1", 5, 1,.6);
+// // const aiRobot = new Robots ("AIR1", 5, 1,.6);
+
+// // let i = 0;
+// // let x = 0;
+// // let round = 1;
+// // const round1HumWinArr = [];
+// // const round1AiWinArr = [];
 
 
 // //round1 = attack
@@ -128,7 +187,7 @@ document.getElementById("myButton").onclick = function(){
 //         console.log("ai player has 1 win") && aiWinArr.push("one win")
 //     }
 // } 
-   
+
 // playerRobot.punch(aiRobot)
 
 // console.log(aiRobot.HP)

@@ -1,0 +1,15 @@
+
+.mainDiv{
+    border: solid blue; height: 50vh; width: 50vw;position: center ; display: flex;
+    justify-content: center;
+    align-items: center}
+
+header{
+    position: center ; display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+label{
+    
+}
