@@ -50,17 +50,17 @@ document.getElementById("myButton").onclick = function () {
 // the hp values back to 0 to restart the game
 // i tried to link everything but it still would not work
 
-const playAgain = () => {
-    if (humanHP < 10 || aiHP < 10) {
-        humanHP === 10;
-        aiHP === 10;
-    }
-}
+// const playAgain = () => {
+//     if (humanHP < 10 || aiHP < 10) {
+//         humanHP === 10;
+//         aiHP === 10;
+//     }
+// }
 
-playAgain();
+// playAgain();
 
-const playAgainBtn = document.getElementById("playAgainBtn")
-playAgainBtn.addEventListener("click",playAgain)
+// const playAgainBtn = document.getElementById("playAgainBtn")
+// playAgainBtn.addEventListener("click",playAgain)
 
 
 
