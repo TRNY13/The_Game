@@ -11,6 +11,15 @@
 // Once either the human or ai reaches 0 hp the game is over and that is where
 // the code break comes in.
 
+// creating the variable for bottom row, and assinging it to a JS variable
+let bottomRow = document.getElementById('bottomRow');
+// cool thing I found out, you can use this bottomRow.innerHTML to give real time prompts, kind of like a console.log
+
+// function startFight(){
+// }
+// startFight() I tried to make a function to start the fight with the button I have, but as usual it doesnt work lol
+
+
 // I put the HP variables outside of the function so the HP doesnt reset each time
 let humanHP = 10;
 let aiHP = 10;
