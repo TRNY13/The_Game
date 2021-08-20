@@ -5,75 +5,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock 'Em Sock 'Em Robots The Game!!!</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body
-    style="background: url(https://images.unsplash.com/photo-1509563268479-0f004cf3f58b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80)">
+<body style = "background: url(https://images.unsplash.com/photo-1509563268479-0f004cf3f58b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80)">
+    
     <header>Rock 'Em Sock 'Em Robots The Game!!!</header>
 
     <!-- I was going to add background audio of a crowd cheering but then i found out chrome based browsers do not allow auto play -->
-
-
-
-
+    
+    
     <div id="buttonDiv">
-        <button onclick="startFight()" id="startButton">Start The Fight!!</button>
+    <button onclick="startFight()" id="startButton">Start The Fight!!</button>
     </div>
     <!-- This label,input,& button here is for where the user will input the command to punch  -->
+    
 
 
 
     <!-- This is the overall div containing everything -->
-    <!-- The top row div is for the 2 robots, the player is on the left, ai on the right -->
-    <!-- css robots is created to give me the option to add additional css elements for the robots themselves -->
-    <!-- The player robot HP and ai robot Hp divs are created to showcase the health bars -->
-    <!-- use span below the HP divs to label the HP values -->
+        <!-- The top row div is for the 2 robots, the player is on the left, ai on the right -->
+        <!-- css robots is created to give me the option to add additional css elements for the robots themselves -->
+        <!-- The player robot HP and ai robot Hp divs are created to showcase the health bars -->
+        <!-- use span below the HP divs to label the HP values -->
+        
+        
+        
+        <div id="container">
+        <div id="topRow">
+            <div id="playerRobotHealth" class="robotStats">
+            <span class="hpSpan">HP</span> <br>
+            <div class="hpDiv">
+                <div id="playerRobotHP" class="hpBar"></div>
+            </div>
+        </div>
 
 
-    <div id="playerRobot" class="cssRobots">
-        <img src="images/player_Robot.jpg">
-    </div>
-    <div id="aiRobot" class="cssRobots">
-        <img src="images/ai_Robot.jpg">
-    </div>
+
+
+            
+            <div id="playerRobot" class="cssRobots">
+                <img src="images/player_Robot.jpg">
+            </div>
+            <div id="aiRobot" class="cssRobots">
+                <img src="images/ai_Robot.jpg">
+            </div>
 
 
 
 
-    <div id="aiRobotHealth" class="robotStats">
-        <span class="hpSpan">HP</span> <br>
-        <div class="hpDiv">
-            <div id="aiRobotHP" class="hpBar"></div>
+            <div id="aiRobotHealth" class="robotStats">
+            <span class="hpSpan">HP</span> <br>
+            <div class="hpDiv">
+                <div id="aiRobotHP" class="hpBar"></div>
+            </div>
         </div>
     </div>
-    </div>
 
-
-
-
-
-
-    <!-- The bottom row will contain information for the game -->
-    <!-- the info in the bottom row div is header to easily make the font larger and bold -->
-    <div id="bottomRow">
-        <h5>Are You Ready to Ruuuuuuuumble!!!</h5>
-        <h2>You are the Robot on the left! Try to knock out the robot on the right using the Punch Button!</h2>
-        <!-- I ended up having the user type in punch, I was unable to get my buttons to link with my function -->
-        <label>Type in Punch! to Punch!</label><br>
-        <div id="buttonDiv">
+        <!-- The bottom row will contain information for the game -->
+        <!-- the info in the bottom row div is header to easily make the font larger and bold -->
+        <div id="bottomRow">
+            <h5>Are You Ready to Ruuuuuuuumble!!!</h5>
+            <h2>You are the Robot on the left! Try to knock out the robot on the right using the Punch Button!</h2>
+            <label>Type in Punch! to Punch!</label><br>
+            <div id="buttonDiv">
             <input type="text" id="myText"><br>
-        </div>
-        <div id="buttonDiv">
+            </div>
+            <div id="buttonDiv">
             <button type="button" id="myButton">Punch!</button>
+            </div>
         </div>
     </div>
     </div>
-    </div>
 
 
-    <script src="app.js"></script>
+
+
+
+
+    <script src="draft.js"> </script>
 </body>
 
 </html>
