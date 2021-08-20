@@ -33,7 +33,7 @@ document.getElementById("myButton").onclick = function () {
     let robotChancetoPunch = .6; //to give both a slightly higher chance to land a punch
     if (humanHP === 0) { //These first 2 checks are to check to make sure neither human or robot are out of hp
         leftInfoDiv.innerHTML = "You lost the game! & The Ai rocked you!", "Click to Play Again!";
-        
+        console.log("You lost the game! & The Ai rocked you!", "Click to Play Again!")
     } else if (aiHP === 0) {
         leftInfoDiv.innerHTML = "You rocked the Ai & won the game!", "Click to Play Again!"
         console.log("You rocked the Ai & won the game!", "Click to Play Again!")
@@ -41,15 +41,19 @@ document.getElementById("myButton").onclick = function () {
         // users turn
         if (userInput == "Punch!" && humanChancetoPunch > Math.random()) {
             aiHP--; //this decrements the Ai's hp if they get hit
+            leftInfoDiv.innerHTML = "You landed a Punch!!!", "AIHealth: " + aiHP
             console.log("You landed a Punch!!!", "AIHealth: " + aiHP)
         } else {
+            leftInfoDiv.innerHTML = "You missed!"
             console.log("You missed!");
         }
         //ais turn
         if (userInput == "Punch!" && robotChancetoPunch > Math.random()) {
             humanHP--; //this decrements the Humans Hp if they get hit
+            leftInfoDiv.innerHTML = "The AI punched you!", "HumanHealth: " + humanHP
             console.log("The AI punched you!", "HumanHealth: " + humanHP);
         } else {
+            leftInfoDiv.innerHTML = "AI missed!"
             console.log("AI missed!")
         }
 
