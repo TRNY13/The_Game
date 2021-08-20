@@ -15,10 +15,13 @@
 
     <!-- I was going to add background audio of a crowd cheering but then i found out chrome based browsers do not allow auto play -->
     
+
+
     
     <div id="buttonDiv">
-    <button onclick="startFight()" id="startButton">Start The Fight!!</button>
+        <div id=leftInfoDiv></div>
     </div>
+        
     <!-- This label,input,& button here is for where the user will input the command to punch  -->
     
 
@@ -35,13 +38,16 @@
         <div id="container">
         <div id="topRow">
             <div id="playerRobotHealth" class="robotStats">
-            <span class="hpSpan">HP</span> <br>
+                <!-- I had to add in the left info div to display info about the fight since I couldnt get the HP bars to work -->
+                
+                  
+                <span class="hpSpan">HP</span> <br>
             <div class="hpDiv">
                 <div id="playerRobotHP" class="hpBar"></div>
             </div>
         </div>
 
-
+        
 
 
             
@@ -70,9 +76,13 @@
             <h2>You are the Robot on the left! Try to knock out the robot on the right using the Punch Button!</h2>
             <label>Type in Punch! to Punch!</label><br>
             <div id="buttonDiv">
+            <button onclick="startFight()" id="startButton">Start The Fight!!</button>
+            </div>
+            <div id="buttonDiv">
             <input type="text" id="myText"><br>
             </div>
             <div id="buttonDiv">
+                
             <button type="button" id="myButton">Punch!</button>
             </div>
         </div>
@@ -84,7 +94,7 @@
 
 
 
-    <script src="draft.js"> </script>
+    <script src="app.js"> </script>
 </body>
 
 </html>

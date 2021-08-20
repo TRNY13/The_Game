@@ -9,12 +9,16 @@
     border-color: aqua;
     justify-content: center;
     align-items: baseline;
-    
+    border: red;
 }
 
-#playerRobot{
-    
-    border-color: red;
+
+#leftInfoDiv{
+    background-color:black;
+    width: 500px;
+    height: 40px;
+    border: white;
+
 }
 
 /* This specifies changes to the robots image, it was really large so had to shrink it */
@@ -74,7 +78,7 @@
     background-color: white;
     border: 5px solid;
     border-color: black;
-    font: 100pt Arial;
+    font: 75pt Arial;
     border-radius: 40px;
     font-weight: bold;
     text-align: center;
@@ -86,11 +90,11 @@
 /* Same thing with start button, I was unable to get the function to work in time. */
 #startButton{
     background-color: white;
-    border: 5px solid;
+    border: 1px solid;
     border-color: black;
     border-color: black;
-    font: 30pt Arial;
-    border-radius: 40px;
+    font: 10pt Arial;
+    border-radius: 10px;
     font-weight: bold;
     text-align: center;
 }

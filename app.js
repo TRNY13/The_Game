@@ -13,6 +13,7 @@
 
 // creating the variable for bottom row, and assinging it to a JS variable
 let bottomRow = document.getElementById('bottomRow');
+let leftInfoDiv = document.getElementById('leftInfoDiv');
 // cool thing I found out, you can use this bottomRow.innerHTML to give real time prompts, kind of like a console.log
 
 // function startFight(){
@@ -31,8 +32,10 @@ document.getElementById("myButton").onclick = function () {
     let humanChancetoPunch = .6; //Both the Users and AI's chance to attack are set to .6,
     let robotChancetoPunch = .6; //to give both a slightly higher chance to land a punch
     if (humanHP === 0) { //These first 2 checks are to check to make sure neither human or robot are out of hp
-        console.log("You lost the game! & The Ai rocked you!", "Click to Play Again!")
+        leftInfoDiv.innerHTML = "You lost the game! & The Ai rocked you!", "Click to Play Again!";
+        
     } else if (aiHP === 0) {
+        leftInfoDiv.innerHTML = "You rocked the Ai & won the game!", "Click to Play Again!"
         console.log("You rocked the Ai & won the game!", "Click to Play Again!")
     } else { //this else statement starts the fighting for both characters
         // users turn
