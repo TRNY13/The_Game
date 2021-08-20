@@ -1,1 +1,130 @@
+/* Use hashtag for topRow div since it is an id */
+/* flex-direction row took it from vertical to horizontal */
+/* justify-content centers the top row and the images */
+/* align-items assigns all of the content to the bottom of the div */
+#topRow{ 
+    display: flex;
+    flex-direction: row;
+    
+    border-color: aqua;
+    justify-content: center;
+    align-items: baseline;
+    
+}
+
+#playerRobot{
+    
+    border-color: red;
+}
+
+/* This specifies changes to the robots image, it was really large so had to shrink it */
+
+#playerRobot img{
+    height: 500px;
+    
+}
+
+
+#aiRobot img{
+    height: 500px;
+    
+}
+
+/* Using dot to refer to the robots class */
+/* margin is there to add space around the robot images */
+.cssRobots{
+    margin: 100px;
+}
+
+/* Added padding on the bottom row to space any words from the border, so that it wont be sitting right on it. */
+#bottomRow{
+    padding: 20px;
+    font:20pt;
+    text-align:center;
+}
+
+/* use dot for class */
+.robotStats{
+    width:300px;
+}
+
+/* The Hp style elements were created to create health bars, however the math to make them work was really difficult. Did not have time to finish the java portion. */
+.hpBorder{
+    width: 300px;
+    height: 30px;
+    border: 3px solid;
+    border-color: black;
+}
+
+.hpBar{
+    width: 350px;
+    background-color: green;
+    height: 30px;
+}
+
+/* This button Div was created to move whatever elements I needed moved to the center */
+#buttonDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* This CSS adds the background color, effects, and font for the punch button. */
+#myButton{
+    background-color: white;
+    border: 5px solid;
+    border-color: black;
+    font: 100pt Arial;
+    border-radius: 40px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Same thing with start button, I was unable to get the function to work in time. */
+#startButton{
+    background-color: white;
+    border: 5px solid;
+    border-color: black;
+    border-color: black;
+    font: 30pt Arial;
+    border-radius: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* These hover elements are pretty SE, they are really cool and are definetely one of my favorite CSS elements now. */
+#startButton:hover{
+    background-color: black;
+    color: white;
+}
+
+
+#myButton:hover{
+    background-color: black;
+    color: white;
+}
+
+input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+input:hover{
+    background-color:grey;
+}
+
+header{
+    font-weight: bold;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 
