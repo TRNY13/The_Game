@@ -41,10 +41,10 @@ document.getElementById("myButton").onclick = function () {
         // users turn
         if (userInput == "Punch!" && humanChancetoPunch > Math.random()) {
             aiHP--; //this decrements the Ai's hp if they get hit
-            leftInfoDiv.innerHTML = "You landed a Punch!!!", "AIHealth: " + aiHP
+            leftInfoDiv.innerHTML = "You landed a Punch!!!", "AIHealth: " + aiHP //All of these leftInfoDivs explain what is happening to the user or the ai
             console.log("You landed a Punch!!!", "AIHealth: " + aiHP)
         } else {
-            leftInfoDiv.innerHTML = "You missed!"
+            leftInfoDiv.innerHTML = "You missed!" // I get the left info div from the document.getElementById 
             console.log("You missed!");
         }
         //ais turn

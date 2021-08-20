@@ -111,7 +111,7 @@
     background-color: black;
     color: white;
 }
-
+/* At first I tried to allign input without having to put it in another div. But I ended up having to put it inside a Mybutton DIV */
 input{
     display: flex;
     justify-content: center;
